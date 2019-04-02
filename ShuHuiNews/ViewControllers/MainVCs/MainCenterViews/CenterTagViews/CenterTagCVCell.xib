@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CenterTagCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="74"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPd-mI-yRm">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="74"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZPd-mI-yRm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Hn-fI-6gD"/>
+                <constraint firstAttribute="bottom" secondItem="ZPd-mI-yRm" secondAttribute="bottom" id="6Yv-go-z0O"/>
+                <constraint firstItem="ZPd-mI-yRm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Ak-u9-XH1"/>
+                <constraint firstAttribute="trailing" secondItem="ZPd-mI-yRm" secondAttribute="trailing" id="Obj-XU-nWG"/>
+            </constraints>
+            <size key="customSize" width="246" height="74"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="titleLab" destination="ZPd-mI-yRm" id="NIq-4R-38L"/>
+            </connections>
+            <point key="canvasLocation" x="123" y="64"/>
+        </collectionViewCell>
+    </objects>
+</document>

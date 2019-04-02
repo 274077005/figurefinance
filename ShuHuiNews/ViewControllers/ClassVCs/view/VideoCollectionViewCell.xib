@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F99791CE-6EF4-4270-A199-5B04E2BA3D6A.png" translatesAutoresizingMaskIntoConstraints="NO" id="roH-rk-mWK">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="RIw-wm-sAE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="股票的市场构成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-sx-KQ7">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SB9-HH-8jF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="讲师：谢志明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-7Q-EPB">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="hiy-rx-q4X"/>
+                            <constraint firstAttribute="width" constant="80" id="r90-aw-rea"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_Small.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-aA-bt1">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="asN-GM-cWf"/>
+                            <constraint firstAttribute="width" constant="11" id="kjD-IL-3zG"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goLive.png" translatesAutoresizingMaskIntoConstraints="NO" id="JA9-bq-BBz">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="fwA-f0-mNd"/>
+                            <constraint firstAttribute="height" constant="38" id="hi1-pO-syD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="891.3万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6eK-qD-8yd">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Ome-3h-gou"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="a7d-aA-bt1" firstAttribute="top" secondItem="DE5-sx-KQ7" secondAttribute="bottom" constant="3.5" id="3HJ-a2-2gy"/>
+                <constraint firstItem="WaK-7Q-EPB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CuR-HD-0yf"/>
+                <constraint firstItem="DE5-sx-KQ7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PI8-Sl-YDc"/>
+                <constraint firstItem="JA9-bq-BBz" firstAttribute="centerX" secondItem="roH-rk-mWK" secondAttribute="centerX" id="W7G-M7-PKp"/>
+                <constraint firstItem="WaK-7Q-EPB" firstAttribute="top" secondItem="DE5-sx-KQ7" secondAttribute="bottom" id="YgK-Nb-YyO"/>
+                <constraint firstItem="roH-rk-mWK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZqK-EM-4nD"/>
+                <constraint firstAttribute="trailing" secondItem="DE5-sx-KQ7" secondAttribute="trailing" id="bh0-nt-iTS"/>
+                <constraint firstItem="JA9-bq-BBz" firstAttribute="centerY" secondItem="roH-rk-mWK" secondAttribute="centerY" id="bqc-WE-5MN"/>
+                <constraint firstAttribute="trailing" secondItem="roH-rk-mWK" secondAttribute="trailing" id="c1o-lK-Ypf"/>
+                <constraint firstItem="roH-rk-mWK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dG5-WE-Vgy"/>
+                <constraint firstAttribute="trailing" secondItem="6eK-qD-8yd" secondAttribute="trailing" id="eAg-Sn-Fb0"/>
+                <constraint firstItem="6eK-qD-8yd" firstAttribute="top" secondItem="DE5-sx-KQ7" secondAttribute="bottom" id="lJZ-Qg-zey"/>
+                <constraint firstItem="a7d-aA-bt1" firstAttribute="leading" secondItem="WaK-7Q-EPB" secondAttribute="trailing" constant="3" id="mNO-ob-2mF"/>
+                <constraint firstItem="6eK-qD-8yd" firstAttribute="leading" secondItem="a7d-aA-bt1" secondAttribute="trailing" constant="3" id="v4M-H3-9kK"/>
+                <constraint firstItem="DE5-sx-KQ7" firstAttribute="top" secondItem="roH-rk-mWK" secondAttribute="bottom" constant="10" id="wbd-RI-BPH"/>
+            </constraints>
+            <size key="customSize" width="353" height="207"/>
+            <connections>
+                <outlet property="lookNumLab" destination="6eK-qD-8yd" id="lYz-Ca-pqp"/>
+                <outlet property="teacherNameLab" destination="WaK-7Q-EPB" id="JMQ-C0-nAC"/>
+                <outlet property="titleLab" destination="DE5-sx-KQ7" id="B0j-BM-SQ7"/>
+                <outlet property="videoImg" destination="roH-rk-mWK" id="hzN-vR-69S"/>
+            </connections>
+            <point key="canvasLocation" x="176.5" y="-111.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="F99791CE-6EF4-4270-A199-5B04E2BA3D6A.png" width="11" height="11"/>
+        <image name="goLive.png" width="38" height="38"/>
+        <image name="video_Small.png" width="11" height="11"/>
+    </resources>
+</document>

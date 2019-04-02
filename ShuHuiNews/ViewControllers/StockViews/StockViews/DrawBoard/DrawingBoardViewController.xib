@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawingBoardViewController">
+            <connections>
+                <outlet property="colorFirstBtn" destination="aKt-xx-df7" id="BYk-l0-qrw"/>
+                <outlet property="colorSecondBtn" destination="tBH-1v-WW1" id="gyF-Zy-Aq9"/>
+                <outlet property="drawColorBtn" destination="AEh-Rf-tRJ" id="5RL-fx-8NV"/>
+                <outlet property="drawImgV" destination="ePN-Bn-sKg" id="8c7-ZN-07Z"/>
+                <outlet property="drawTextBtn" destination="2h7-r8-uAh" id="ucg-yD-Ff9"/>
+                <outlet property="drawingView" destination="bHS-mN-22k" id="Pv4-xQ-mt6"/>
+                <outlet property="lineTypeBtn" destination="CTQ-6z-gFR" id="I3a-Fa-r8L"/>
+                <outlet property="lineTypeFirstBtn" destination="BEk-ij-UTN" id="KDg-NJ-uSR"/>
+                <outlet property="lineTypeSecondBtn" destination="Drm-cp-tzk" id="Xlq-po-wdG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePN-Bn-sKg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGX-bu-7Mq">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YY-31-bYY">
+                            <rect key="frame" x="21" y="8.5" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="U80-CN-2sa"/>
+                                <constraint firstAttribute="width" secondItem="8YY-31-bYY" secondAttribute="height" id="iyk-aH-Ajy"/>
+                            </constraints>
+                            <state key="normal" image="drawClose.png"/>
+                            <connections>
+                                <action selector="drawCloseBtnClick:" destination="-1" eventType="touchUpInside" id="whz-GN-B3L"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-Rf-tRJ">
+                            <rect key="frame" x="77.5" y="8" width="33" height="33"/>
+                            <state key="normal" image="drawYellow.png"/>
+                            <connections>
+                                <action selector="drawColorBtnClick:" destination="-1" eventType="touchUpInside" id="y8Y-YM-jLg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTQ-6z-gFR">
+                            <rect key="frame" x="133.5" y="8" width="33" height="33"/>
+                            <state key="normal" image="drawLine.png"/>
+                            <connections>
+                                <action selector="drawLineTypeBtnClick:" destination="-1" eventType="touchUpInside" id="ekg-ck-mHH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97W-3n-MaQ">
+                            <rect key="frame" x="208.5" y="8" width="33" height="33"/>
+                            <state key="normal" image="drawBack.png"/>
+                            <connections>
+                                <action selector="drawBackBtnClick:" destination="-1" eventType="touchUpInside" id="elP-eh-2Tf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h7-r8-uAh">
+                            <rect key="frame" x="265" y="8.5" width="33" height="33"/>
+                            <state key="normal" image="drawText.png"/>
+                            <state key="selected" image="drawTextSelected.png"/>
+                            <connections>
+                                <action selector="drawTextBtnClick:" destination="-1" eventType="touchUpInside" id="t1b-Vn-HXR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGz-pu-Yt7">
+                            <rect key="frame" x="321" y="8" width="33" height="33"/>
+                            <state key="normal" image="share.png"/>
+                            <connections>
+                                <action selector="shareImageBtnClick:" destination="-1" eventType="touchUpInside" id="zJw-Ch-7EY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.18823529410000001" blue="0.20784313730000001" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstItem="cGz-pu-Yt7" firstAttribute="centerY" secondItem="2h7-r8-uAh" secondAttribute="centerY" id="28d-Bw-OqV"/>
+                        <constraint firstItem="CTQ-6z-gFR" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="0.8" id="3hR-fy-K3e"/>
+                        <constraint firstItem="8YY-31-bYY" firstAttribute="centerY" secondItem="iGX-bu-7Mq" secondAttribute="centerY" id="9mA-6M-ifv"/>
+                        <constraint firstItem="2h7-r8-uAh" firstAttribute="centerY" secondItem="97W-3n-MaQ" secondAttribute="centerY" id="L7L-Jn-cTn"/>
+                        <constraint firstAttribute="height" constant="50" id="M3S-iU-qoM"/>
+                        <constraint firstItem="CTQ-6z-gFR" firstAttribute="width" secondItem="8YY-31-bYY" secondAttribute="width" id="NDk-1p-Gh5"/>
+                        <constraint firstItem="2h7-r8-uAh" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="1.5" id="TTf-Rl-UgJ"/>
+                        <constraint firstItem="97W-3n-MaQ" firstAttribute="centerY" secondItem="CTQ-6z-gFR" secondAttribute="centerY" id="WGl-eh-SEV"/>
+                        <constraint firstItem="8YY-31-bYY" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="0.2" id="Xgu-c8-m0B"/>
+                        <constraint firstItem="AEh-Rf-tRJ" firstAttribute="centerY" secondItem="8YY-31-bYY" secondAttribute="centerY" id="a0L-7O-ddD"/>
+                        <constraint firstItem="AEh-Rf-tRJ" firstAttribute="height" secondItem="8YY-31-bYY" secondAttribute="height" id="aJg-ps-X3U"/>
+                        <constraint firstItem="97W-3n-MaQ" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="1.2" id="bER-2C-ftX"/>
+                        <constraint firstItem="AEh-Rf-tRJ" firstAttribute="width" secondItem="8YY-31-bYY" secondAttribute="width" id="eSc-bE-ySO"/>
+                        <constraint firstItem="AEh-Rf-tRJ" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="0.5" id="fDq-bY-33V"/>
+                        <constraint firstItem="CTQ-6z-gFR" firstAttribute="centerY" secondItem="8YY-31-bYY" secondAttribute="centerY" id="gub-pW-Nkk"/>
+                        <constraint firstItem="2h7-r8-uAh" firstAttribute="height" secondItem="97W-3n-MaQ" secondAttribute="height" id="kmp-h4-N4Q"/>
+                        <constraint firstItem="cGz-pu-Yt7" firstAttribute="centerX" secondItem="iGX-bu-7Mq" secondAttribute="centerX" multiplier="1.8" id="lPZ-YW-PsI"/>
+                        <constraint firstItem="97W-3n-MaQ" firstAttribute="height" secondItem="CTQ-6z-gFR" secondAttribute="height" id="r4a-kZ-4aE"/>
+                        <constraint firstItem="cGz-pu-Yt7" firstAttribute="height" secondItem="2h7-r8-uAh" secondAttribute="height" id="tnp-07-OQs"/>
+                        <constraint firstItem="cGz-pu-Yt7" firstAttribute="width" secondItem="2h7-r8-uAh" secondAttribute="width" id="wdD-vV-XcL"/>
+                        <constraint firstItem="CTQ-6z-gFR" firstAttribute="height" secondItem="8YY-31-bYY" secondAttribute="height" id="xd9-i6-wZP"/>
+                        <constraint firstItem="2h7-r8-uAh" firstAttribute="width" secondItem="97W-3n-MaQ" secondAttribute="width" id="xlD-Bd-GNr"/>
+                        <constraint firstItem="97W-3n-MaQ" firstAttribute="width" secondItem="CTQ-6z-gFR" secondAttribute="width" id="zfd-d8-RJG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHS-mN-22k" customClass="DrawingView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drm-cp-tzk">
+                            <rect key="frame" x="133.5" y="574" width="33" height="33"/>
+                            <state key="normal" image="drawCircle.png"/>
+                            <connections>
+                                <action selector="lineTypeSecondBtnClick:" destination="-1" eventType="touchUpInside" id="NxV-Ic-KHE"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEk-ij-UTN">
+                            <rect key="frame" x="133.5" y="531" width="33" height="33"/>
+                            <state key="normal" image="drawRectangle.png"/>
+                            <connections>
+                                <action selector="lineTypeFirstBtnClick:" destination="-1" eventType="touchUpInside" id="xeg-12-Yli"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKt-xx-df7">
+                            <rect key="frame" x="75.5" y="531" width="33" height="33"/>
+                            <state key="normal" image="drawRed.png"/>
+                            <connections>
+                                <action selector="drawColorFirstBtnClick:" destination="-1" eventType="touchUpInside" id="1N4-1o-am8"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-1v-WW1">
+                            <rect key="frame" x="75.5" y="576" width="33" height="33"/>
+                            <state key="normal" image="drawGreen.png"/>
+                            <connections>
+                                <action selector="drawColorBtnClick:" destination="-1" eventType="touchUpInside" id="Gzs-YM-GvW"/>
+                                <action selector="drawColorSecondBtnClick:" destination="-1" eventType="touchUpInside" id="R2O-OZ-LO7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="aKt-xx-df7" firstAttribute="width" secondItem="tBH-1v-WW1" secondAttribute="width" id="8T1-ZP-mR5"/>
+                        <constraint firstItem="tBH-1v-WW1" firstAttribute="top" secondItem="aKt-xx-df7" secondAttribute="bottom" constant="12" id="9HI-sR-fxp"/>
+                        <constraint firstAttribute="bottom" secondItem="Drm-cp-tzk" secondAttribute="bottom" constant="10" id="Pox-1P-yAn"/>
+                        <constraint firstItem="Drm-cp-tzk" firstAttribute="top" secondItem="BEk-ij-UTN" secondAttribute="bottom" constant="10" id="X9B-mq-JtG"/>
+                        <constraint firstAttribute="bottom" secondItem="tBH-1v-WW1" secondAttribute="bottom" constant="8" id="dgz-N3-kJm"/>
+                        <constraint firstItem="aKt-xx-df7" firstAttribute="centerX" secondItem="tBH-1v-WW1" secondAttribute="centerX" id="ij2-6I-mvL"/>
+                        <constraint firstItem="aKt-xx-df7" firstAttribute="height" secondItem="tBH-1v-WW1" secondAttribute="height" id="isf-h2-F64"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BEk-ij-UTN" firstAttribute="width" secondItem="CTQ-6z-gFR" secondAttribute="width" id="0wf-wU-fxa"/>
+                <constraint firstItem="tBH-1v-WW1" firstAttribute="width" secondItem="AEh-Rf-tRJ" secondAttribute="width" id="1po-DN-U0D"/>
+                <constraint firstAttribute="trailing" secondItem="ePN-Bn-sKg" secondAttribute="trailing" id="AbD-ps-Mm8"/>
+                <constraint firstItem="Drm-cp-tzk" firstAttribute="width" secondItem="CTQ-6z-gFR" secondAttribute="width" id="CLi-k4-1fY"/>
+                <constraint firstAttribute="bottom" secondItem="iGX-bu-7Mq" secondAttribute="bottom" id="Chg-bd-mhS"/>
+                <constraint firstItem="BEk-ij-UTN" firstAttribute="height" secondItem="CTQ-6z-gFR" secondAttribute="height" id="FW2-HA-TLU"/>
+                <constraint firstAttribute="trailing" secondItem="bHS-mN-22k" secondAttribute="trailing" id="FvB-gj-Wgw"/>
+                <constraint firstItem="iGX-bu-7Mq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lyz-KH-hVw"/>
+                <constraint firstItem="tBH-1v-WW1" firstAttribute="height" secondItem="AEh-Rf-tRJ" secondAttribute="height" id="MdA-rw-kjy"/>
+                <constraint firstItem="bHS-mN-22k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Nkk-Ea-Kam"/>
+                <constraint firstItem="Drm-cp-tzk" firstAttribute="height" secondItem="CTQ-6z-gFR" secondAttribute="height" id="QKm-zP-kB5"/>
+                <constraint firstItem="bHS-mN-22k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UUE-Dm-AzW"/>
+                <constraint firstItem="iGX-bu-7Mq" firstAttribute="top" secondItem="ePN-Bn-sKg" secondAttribute="bottom" constant="-50" id="Xvu-bx-r20"/>
+                <constraint firstItem="iGX-bu-7Mq" firstAttribute="top" secondItem="bHS-mN-22k" secondAttribute="bottom" id="ZAp-5K-23m"/>
+                <constraint firstItem="ePN-Bn-sKg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bxR-La-B91"/>
+                <constraint firstItem="Drm-cp-tzk" firstAttribute="centerX" secondItem="CTQ-6z-gFR" secondAttribute="centerX" id="eaz-Xi-2Bb"/>
+                <constraint firstAttribute="trailing" secondItem="iGX-bu-7Mq" secondAttribute="trailing" id="hqF-91-aSO"/>
+                <constraint firstItem="ePN-Bn-sKg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lss-dd-BHy"/>
+                <constraint firstItem="BEk-ij-UTN" firstAttribute="centerX" secondItem="CTQ-6z-gFR" secondAttribute="centerX" id="tSC-P6-6ju"/>
+                <constraint firstItem="tBH-1v-WW1" firstAttribute="centerX" secondItem="AEh-Rf-tRJ" secondAttribute="centerX" constant="-2" id="zRt-8L-GzI"/>
+            </constraints>
+            <point key="canvasLocation" x="-479.5" y="-88.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="drawBack.png" width="34" height="34"/>
+        <image name="drawCircle.png" width="33" height="33"/>
+        <image name="drawClose.png" width="34" height="34"/>
+        <image name="drawGreen.png" width="34" height="34"/>
+        <image name="drawLine.png" width="33" height="33"/>
+        <image name="drawRectangle.png" width="33" height="33"/>
+        <image name="drawRed.png" width="34" height="34"/>
+        <image name="drawText.png" width="34" height="34"/>
+        <image name="drawTextSelected.png" width="34" height="34"/>
+        <image name="drawYellow.png" width="34" height="34"/>
+        <image name="share.png" width="23" height="23"/>
+    </resources>
+</document>

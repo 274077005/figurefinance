@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCellId" id="brj-PP-83j" customClass="StockCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="219" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="219" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redact.png" translatesAutoresizingMaskIntoConstraints="NO" id="aqs-Z3-gff">
+                        <rect key="frame" x="0.0" y="0.0" width="219" height="80"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自选" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JU-So-6K4">
+                        <rect key="frame" x="0.0" y="0.0" width="219" height="80"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0JU-So-6K4" firstAttribute="leading" secondItem="brj-PP-83j" secondAttribute="leading" id="DUV-25-nhN"/>
+                <constraint firstItem="aqs-Z3-gff" firstAttribute="leading" secondItem="brj-PP-83j" secondAttribute="leading" id="DqM-9b-JZz"/>
+                <constraint firstAttribute="trailing" secondItem="aqs-Z3-gff" secondAttribute="trailing" id="LFS-rH-AgB"/>
+                <constraint firstAttribute="bottom" secondItem="aqs-Z3-gff" secondAttribute="bottom" id="OTf-2H-GYr"/>
+                <constraint firstItem="aqs-Z3-gff" firstAttribute="top" secondItem="brj-PP-83j" secondAttribute="top" id="hGH-Qd-3VT"/>
+                <constraint firstAttribute="bottom" secondItem="0JU-So-6K4" secondAttribute="bottom" id="hNL-LY-nib"/>
+                <constraint firstAttribute="trailing" secondItem="0JU-So-6K4" secondAttribute="trailing" id="rjd-XV-x6u"/>
+                <constraint firstItem="0JU-So-6K4" firstAttribute="top" secondItem="brj-PP-83j" secondAttribute="top" id="vZx-gH-WmJ"/>
+            </constraints>
+            <size key="customSize" width="219" height="80"/>
+            <connections>
+                <outlet property="mainLab" destination="0JU-So-6K4" id="8af-Ug-tOh"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="37"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="redact.png" width="113" height="33"/>
+    </resources>
+</document>

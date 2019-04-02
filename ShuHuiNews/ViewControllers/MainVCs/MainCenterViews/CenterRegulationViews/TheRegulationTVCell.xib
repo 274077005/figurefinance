@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="175" id="KGk-i7-Jjw" customClass="TheRegulationTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="174.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqv-zy-RSy">
+                        <rect key="frame" x="64" y="95.5" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-KD-Hcj">
+                        <rect key="frame" x="316" y="79.5" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="qMq-5K-A2V"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIs-Qd-btE">
+                        <rect key="frame" x="10" y="65" width="44" height="44"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-qD-RbF">
+                                <rect key="frame" x="7.5" y="7" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PqU-Dv-fVC"/>
+                                    <constraint firstAttribute="width" secondItem="qp5-qD-RbF" secondAttribute="height" id="tpv-fv-bEJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SIs-Qd-btE" secondAttribute="height" id="7zN-M0-3hQ"/>
+                            <constraint firstItem="qp5-qD-RbF" firstAttribute="centerX" secondItem="SIs-Qd-btE" secondAttribute="centerX" id="9CH-FO-w1B"/>
+                            <constraint firstAttribute="height" constant="44" id="BEG-II-CaQ"/>
+                            <constraint firstItem="qp5-qD-RbF" firstAttribute="centerY" secondItem="SIs-Qd-btE" secondAttribute="centerY" id="Nrh-nj-ACN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIR-Jo-g3h">
+                        <rect key="frame" x="64" y="65" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KIR-Jo-g3h" firstAttribute="leading" secondItem="SIs-Qd-btE" secondAttribute="trailing" constant="10" id="7Cp-0S-bCf"/>
+                    <constraint firstItem="vdi-KD-Hcj" firstAttribute="width" secondItem="vdi-KD-Hcj" secondAttribute="height" id="8fA-85-j73"/>
+                    <constraint firstItem="SIs-Qd-btE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AwY-e3-ykG"/>
+                    <constraint firstItem="oqv-zy-RSy" firstAttribute="leading" secondItem="KIR-Jo-g3h" secondAttribute="leading" id="HFQ-h6-Tth"/>
+                    <constraint firstItem="SIs-Qd-btE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I4G-il-YXd"/>
+                    <constraint firstItem="vdi-KD-Hcj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XJG-Zh-LAI"/>
+                    <constraint firstAttribute="trailing" secondItem="vdi-KD-Hcj" secondAttribute="trailing" constant="10" id="a6E-0D-Wpm"/>
+                    <constraint firstItem="KIR-Jo-g3h" firstAttribute="top" secondItem="SIs-Qd-btE" secondAttribute="top" id="rUv-QE-z5k"/>
+                    <constraint firstItem="oqv-zy-RSy" firstAttribute="bottom" secondItem="SIs-Qd-btE" secondAttribute="bottom" id="sT2-0s-9Jz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coverImgV" destination="qp5-qD-RbF" id="iO1-s9-4o7"/>
+                <outlet property="nameLab" destination="oqv-zy-RSy" id="ecJ-Bl-Sp0"/>
+                <outlet property="timeLab" destination="KIR-Jo-g3h" id="Pz9-sv-haO"/>
+            </connections>
+            <point key="canvasLocation" x="-353" y="85.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="more.png" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QAListHeaderV"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QAListHeaderV">
+            <rect key="frame" x="0.0" y="0.0" width="555" height="174"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqJ-EL-RFE">
+                    <rect key="frame" x="261.5" y="10" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xqJ-EL-RFE" secondAttribute="height" id="9Ba-cd-Wkt"/>
+                        <constraint firstAttribute="height" constant="32" id="S67-Ak-2od"/>
+                    </constraints>
+                    <state key="normal" image="payMoney.png"/>
+                    <connections>
+                        <action selector="payBtnClick:" destination="-1" eventType="touchUpInside" id="7Rg-4b-eTm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-VE-B9X">
+                    <rect key="frame" x="76.5" y="10" width="32" height="32"/>
+                    <state key="normal" image="QAMain.png"/>
+                    <connections>
+                        <action selector="mainQABtnClick:" destination="-1" eventType="touchUpInside" id="6cD-GB-W6t"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beg-w1-aWS">
+                    <rect key="frame" x="446.5" y="10" width="32" height="32"/>
+                    <state key="normal" image="QAEvaluate.png"/>
+                    <connections>
+                        <action selector="evaluateBtnClick:" destination="-1" eventType="touchUpInside" id="6C9-WE-G2p"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的问答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-hP-TJL">
+                    <rect key="frame" x="63.5" y="52" width="57.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="悬赏提问" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-NI-pgX">
+                    <rect key="frame" x="249.5" y="52" width="57.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rH-Hh-np1">
+                    <rect key="frame" x="434" y="52" width="57.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Jj-VE-B9X" firstAttribute="centerY" secondItem="xqJ-EL-RFE" secondAttribute="centerY" id="40J-qQ-uQq"/>
+                <constraint firstItem="4Jj-VE-B9X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.33333" id="66e-iW-5LR"/>
+                <constraint firstItem="xqJ-EL-RFE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="BYJ-gd-RaS"/>
+                <constraint firstItem="vfv-hP-TJL" firstAttribute="centerY" secondItem="Ica-NI-pgX" secondAttribute="centerY" id="Esx-lC-ULy"/>
+                <constraint firstItem="3rH-Hh-np1" firstAttribute="centerY" secondItem="Ica-NI-pgX" secondAttribute="centerY" id="Evs-lj-dg3"/>
+                <constraint firstItem="Ica-NI-pgX" firstAttribute="top" secondItem="xqJ-EL-RFE" secondAttribute="bottom" constant="10" id="FcL-jA-NmH"/>
+                <constraint firstItem="vfv-hP-TJL" firstAttribute="centerX" secondItem="4Jj-VE-B9X" secondAttribute="centerX" id="RD5-Od-6rh"/>
+                <constraint firstItem="3rH-Hh-np1" firstAttribute="centerX" secondItem="beg-w1-aWS" secondAttribute="centerX" id="XTH-BT-v7a"/>
+                <constraint firstItem="xqJ-EL-RFE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YQq-0K-zSe"/>
+                <constraint firstItem="beg-w1-aWS" firstAttribute="centerY" secondItem="xqJ-EL-RFE" secondAttribute="centerY" id="obz-bb-n04"/>
+                <constraint firstItem="Ica-NI-pgX" firstAttribute="centerX" secondItem="xqJ-EL-RFE" secondAttribute="centerX" id="rBS-sS-gl3"/>
+                <constraint firstItem="beg-w1-aWS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.66666" id="vth-MI-LoL"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-544" y="-60"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QAEvaluate.png" width="32" height="32"/>
+        <image name="QAMain.png" width="32" height="32"/>
+        <image name="payMoney.png" width="32" height="32"/>
+    </resources>
+</document>

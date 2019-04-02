@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="255" id="KGk-i7-Jjw" customClass="CorrelationVideoTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="255"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="254.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关视频" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OR-ua-MJQ">
+                        <rect key="frame" x="15" y="5" width="65.5" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="4rw-Wc-X45"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbS-7E-Te8">
+                        <rect key="frame" x="15" y="209.5" width="65.5" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="W9g-q8-oLG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-xi-Tmc">
+                        <rect key="frame" x="0.0" y="204.5" width="424" height="5"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="2MP-eU-nSE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oth-zq-7pI">
+                        <rect key="frame" x="0.0" y="0.0" width="424" height="5"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="k95-f9-OWy"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJF-Bu-YuM" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="50" width="424" height="154.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gJF-Bu-YuM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2PM-F0-lrN"/>
+                    <constraint firstItem="gJF-Bu-YuM" firstAttribute="top" secondItem="8OR-ua-MJQ" secondAttribute="bottom" id="3BJ-I3-2NY"/>
+                    <constraint firstAttribute="trailing" secondItem="Oth-zq-7pI" secondAttribute="trailing" id="3lH-cx-V4f"/>
+                    <constraint firstAttribute="bottom" secondItem="sbS-7E-Te8" secondAttribute="bottom" id="8Rp-88-YYL"/>
+                    <constraint firstItem="8OR-ua-MJQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DpZ-3t-9bb"/>
+                    <constraint firstAttribute="trailing" secondItem="sNP-xi-Tmc" secondAttribute="trailing" id="Gkx-6d-SPi"/>
+                    <constraint firstAttribute="trailing" secondItem="gJF-Bu-YuM" secondAttribute="trailing" id="KnW-VI-Teq"/>
+                    <constraint firstItem="sbS-7E-Te8" firstAttribute="top" secondItem="sNP-xi-Tmc" secondAttribute="bottom" id="WOW-RS-MQT"/>
+                    <constraint firstItem="Oth-zq-7pI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dqJ-WT-FvN"/>
+                    <constraint firstItem="gJF-Bu-YuM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iHP-LN-lTD"/>
+                    <constraint firstItem="sNP-xi-Tmc" firstAttribute="top" secondItem="gJF-Bu-YuM" secondAttribute="bottom" id="ilj-LH-s7o"/>
+                    <constraint firstItem="sbS-7E-Te8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lDD-6O-t2h"/>
+                    <constraint firstItem="sNP-xi-Tmc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sbw-Mz-edX"/>
+                    <constraint firstItem="8OR-ua-MJQ" firstAttribute="top" secondItem="Oth-zq-7pI" secondAttribute="bottom" id="sp4-8X-eGi"/>
+                    <constraint firstItem="Oth-zq-7pI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wJI-Xc-Cim"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iCarouselV" destination="gJF-Bu-YuM" id="nKR-Xe-fTv"/>
+            </connections>
+            <point key="canvasLocation" x="-180" y="161.5"/>
+        </tableViewCell>
+    </objects>
+</document>

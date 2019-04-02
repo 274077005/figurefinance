@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddDiaryCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ylD-QL-yqV">
+                        <rect key="frame" x="0.0" y="0.0" width="308" height="240"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2B-KB-TtD">
+                        <rect key="frame" x="288" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="A2B-KB-TtD" secondAttribute="height" id="O7i-CL-eUS"/>
+                            <constraint firstAttribute="height" constant="20" id="sSz-7x-mbb"/>
+                        </constraints>
+                        <state key="normal" image="flashImgDel.png"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ylD-QL-yqV" secondAttribute="bottom" id="OST-Yf-D3B"/>
+                <constraint firstAttribute="trailing" secondItem="ylD-QL-yqV" secondAttribute="trailing" id="Z22-Eb-dyK"/>
+                <constraint firstItem="ylD-QL-yqV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lDt-bl-nHJ"/>
+                <constraint firstAttribute="trailing" secondItem="A2B-KB-TtD" secondAttribute="trailing" id="mxK-ML-dNB"/>
+                <constraint firstItem="ylD-QL-yqV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wKW-VS-Rlz"/>
+                <constraint firstItem="A2B-KB-TtD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x1n-Ei-gNJ"/>
+            </constraints>
+            <size key="customSize" width="308" height="240"/>
+            <connections>
+                <outlet property="deleteBtn" destination="A2B-KB-TtD" id="Ula-Ta-Whc"/>
+                <outlet property="imgV" destination="ylD-QL-yqV" id="ywc-Zv-bik"/>
+            </connections>
+            <point key="canvasLocation" x="-206" y="96"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flashImgDel.png" width="19" height="19"/>
+    </resources>
+</document>

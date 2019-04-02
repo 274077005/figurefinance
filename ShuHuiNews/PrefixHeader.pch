@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  ShuHuiNews
+//
+//  Created by 耿一 on 2018/4/8.
+//  Copyright © 2018年 耿一. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "BaseDefinition.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKUI/SSUIShareActionSheetStyle.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//测试
+//#define Main_Url @"http://wen.figurefinance.com/api/"
+
+//测试
+#define Main_Url @"http://v2.figurefinance.com/api/"
+
+
+//正式
+//#define Main_Url @"https://www.figurefinance.com/api/"
+
+
+
+
+
+
+//#define Main_Url @"https://app.wemex.com/"
+
+
+#endif /* PrefixHeader_pch */

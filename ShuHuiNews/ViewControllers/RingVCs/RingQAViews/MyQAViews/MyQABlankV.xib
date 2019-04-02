@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyQABlankV"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyQABlankV">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="449"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QABlank.png" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Hi-Vnm">
+                    <rect key="frame" x="134.5" y="100" width="203" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="NNk-Hi-Vnm" secondAttribute="height" multiplier="444:284" id="0vz-ag-97l"/>
+                        <constraint firstAttribute="height" constant="130" id="UXj-p3-1af"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没发布过问题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMd-Ox-k4Z">
+                    <rect key="frame" x="182.5" y="270" width="107.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.74901960784313726" green="0.74901960784313726" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqV-mx-Hhd">
+                    <rect key="frame" x="183.5" y="303" width="105" height="35"/>
+                    <color key="backgroundColor" red="0.054901960780000002" green="0.48627450979999998" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="105" id="fE4-IF-cvY"/>
+                        <constraint firstAttribute="height" constant="35" id="lRs-5T-lmr"/>
+                    </constraints>
+                    <state key="normal" title="去提问">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goBtnClick:" destination="-1" eventType="touchUpInside" id="urp-8i-phu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NNk-Hi-Vnm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="ARI-g8-606"/>
+                <constraint firstItem="gqV-mx-Hhd" firstAttribute="top" secondItem="HMd-Ox-k4Z" secondAttribute="bottom" constant="15" id="Qet-YL-Z6g"/>
+                <constraint firstItem="HMd-Ox-k4Z" firstAttribute="top" secondItem="NNk-Hi-Vnm" secondAttribute="bottom" constant="40" id="TX6-Zb-cSh"/>
+                <constraint firstItem="HMd-Ox-k4Z" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bCd-Bz-jsP"/>
+                <constraint firstItem="NNk-Hi-Vnm" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="e8Y-5f-jqr"/>
+                <constraint firstItem="gqV-mx-Hhd" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kE6-28-dfF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-388" y="-49"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QABlank.png" width="148" height="94"/>
+    </resources>
+</document>

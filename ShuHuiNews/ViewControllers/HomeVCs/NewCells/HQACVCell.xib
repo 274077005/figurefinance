@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HQACVCell">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="122"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0W-aK-K5g">
+                    <rect key="frame" x="5" y="2" width="393" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        的                           ." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDY-MQ-PtG">
+                            <rect key="frame" x="12" y="8" width="366" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-Qt-uE5">
+                            <rect key="frame" x="72" y="77" width="31" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNQ-oh-azX">
+                            <rect key="frame" x="347" y="77" width="31" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.054901960780000002" green="0.48627450979999998" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥999.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxI-mz-J9x">
+                            <rect key="frame" x="12" y="74" width="53" height="20"/>
+                            <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="53" id="GhV-5M-bJ9"/>
+                                <constraint firstAttribute="height" constant="20" id="rNn-f6-1Ld"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" red="0.98823529409999999" green="0.1215686275" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FDY-MQ-PtG" firstAttribute="top" secondItem="D0W-aK-K5g" secondAttribute="top" constant="8" id="3gl-If-xKs"/>
+                        <constraint firstAttribute="height" constant="100" id="4er-Jz-JSw"/>
+                        <constraint firstItem="WxI-mz-J9x" firstAttribute="centerY" secondItem="iQr-Qt-uE5" secondAttribute="centerY" id="N3B-Cx-a36"/>
+                        <constraint firstItem="FDY-MQ-PtG" firstAttribute="leading" secondItem="D0W-aK-K5g" secondAttribute="leading" constant="12" id="bI3-Oj-p4h"/>
+                        <constraint firstAttribute="bottom" secondItem="iQr-Qt-uE5" secondAttribute="bottom" constant="8" id="dtE-wf-Awk"/>
+                        <constraint firstItem="iQr-Qt-uE5" firstAttribute="leading" secondItem="FDY-MQ-PtG" secondAttribute="leading" constant="60" id="j71-ND-WxA"/>
+                        <constraint firstAttribute="trailing" secondItem="KNQ-oh-azX" secondAttribute="trailing" constant="15" id="l23-SC-SLB"/>
+                        <constraint firstAttribute="trailing" secondItem="FDY-MQ-PtG" secondAttribute="trailing" constant="15" id="nYW-R5-zug"/>
+                        <constraint firstItem="KNQ-oh-azX" firstAttribute="centerY" secondItem="iQr-Qt-uE5" secondAttribute="centerY" id="rOA-Mp-Z1T"/>
+                        <constraint firstItem="WxI-mz-J9x" firstAttribute="leading" secondItem="FDY-MQ-PtG" secondAttribute="leading" id="sRJ-dJ-IfE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="D0W-aK-K5g" secondAttribute="trailing" constant="15" id="47V-U0-hWv"/>
+                <constraint firstItem="D0W-aK-K5g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="dXd-rR-Okf"/>
+                <constraint firstItem="D0W-aK-K5g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="yUY-ei-D8s"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backV" destination="D0W-aK-K5g" id="Act-a5-03r"/>
+                <outlet property="contentLab" destination="FDY-MQ-PtG" id="g2r-ti-dRE"/>
+                <outlet property="moneyLab" destination="WxI-mz-J9x" id="xmH-6T-SVI"/>
+                <outlet property="numberLab" destination="KNQ-oh-azX" id="g29-cd-F0u"/>
+                <outlet property="timeLab" destination="iQr-Qt-uE5" id="CDr-AG-XgR"/>
+            </connections>
+            <point key="canvasLocation" x="-1896" y="-284"/>
+        </view>
+    </objects>
+</document>

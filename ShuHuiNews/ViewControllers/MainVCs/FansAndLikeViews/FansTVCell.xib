@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="FansTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="109"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="108.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uat-h6-VlD">
+                        <rect key="frame" x="15" y="32" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="gXO-0D-daF"/>
+                            <constraint firstAttribute="width" secondItem="uat-h6-VlD" secondAttribute="height" id="tSy-ow-Hou"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnc-Pw-sau">
+                        <rect key="frame" x="69" y="45" width="39.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-pj-fYa">
+                        <rect key="frame" x="265" y="41.5" width="74" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="L78-Vg-Lrs"/>
+                            <constraint firstAttribute="width" constant="74" id="Rmq-W8-b0a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="已关注"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="13"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWJ-1p-xds">
+                        <rect key="frame" x="15" y="108" width="339" height="0.5"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="OOX-TA-LW2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gnc-Pw-sau" firstAttribute="leading" secondItem="uat-h6-VlD" secondAttribute="trailing" constant="10" id="Fno-r7-5W9"/>
+                    <constraint firstAttribute="bottom" secondItem="dWJ-1p-xds" secondAttribute="bottom" id="LW4-eK-ME1"/>
+                    <constraint firstAttribute="trailing" secondItem="dWJ-1p-xds" secondAttribute="trailing" id="OAU-xz-OAM"/>
+                    <constraint firstItem="uat-h6-VlD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="X8r-rP-qy1"/>
+                    <constraint firstAttribute="trailing" secondItem="5bi-pj-fYa" secondAttribute="trailing" constant="15" id="b91-6E-IFK"/>
+                    <constraint firstItem="uat-h6-VlD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="iiK-ap-dSu"/>
+                    <constraint firstItem="Gnc-Pw-sau" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kzU-BW-Ht5"/>
+                    <constraint firstItem="5bi-pj-fYa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sPF-Dq-0RO"/>
+                    <constraint firstItem="dWJ-1p-xds" firstAttribute="leading" secondItem="uat-h6-VlD" secondAttribute="leading" id="vzf-KH-bmd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="controllBtn" destination="5bi-pj-fYa" id="fgP-16-Aim"/>
+                <outlet property="imgBtn" destination="uat-h6-VlD" id="tCb-el-BsM"/>
+                <outlet property="nameLab" destination="Gnc-Pw-sau" id="9Fj-DL-Rq3"/>
+            </connections>
+            <point key="canvasLocation" x="-730" y="72"/>
+        </tableViewCell>
+    </objects>
+</document>

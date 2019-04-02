@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="251" id="KGk-i7-Jjw" customClass="RDURLTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="251"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="250.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-ax-0WK">
+                        <rect key="frame" x="15" y="5" width="297" height="240.5"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-jF-GdX">
+                                <rect key="frame" x="0.0" y="0.0" width="297" height="240.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KGk-i7-Jjw" id="hmp-yh-uhi"/>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="kYR-uu-urY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LTf-jF-GdX" firstAttribute="leading" secondItem="UlJ-ax-0WK" secondAttribute="leading" id="1DC-6R-JhW"/>
+                            <constraint firstItem="LTf-jF-GdX" firstAttribute="top" secondItem="UlJ-ax-0WK" secondAttribute="top" id="4aL-ym-K27"/>
+                            <constraint firstAttribute="bottom" secondItem="LTf-jF-GdX" secondAttribute="bottom" id="ewN-iK-ZIS"/>
+                            <constraint firstAttribute="trailing" secondItem="LTf-jF-GdX" secondAttribute="trailing" id="qTp-pN-JMO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="UlJ-ax-0WK" secondAttribute="bottom" constant="5" id="4sr-BV-f0C"/>
+                    <constraint firstItem="UlJ-ax-0WK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7np-2Q-j8d"/>
+                    <constraint firstItem="UlJ-ax-0WK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Rle-Y4-J2p"/>
+                    <constraint firstAttribute="trailing" secondItem="UlJ-ax-0WK" secondAttribute="trailing" constant="15" id="XRh-mv-sJn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="shadowBV" destination="UlJ-ax-0WK" id="m97-5P-9tt"/>
+                <outlet property="tableView" destination="LTf-jF-GdX" id="OCt-RG-eni"/>
+            </connections>
+            <point key="canvasLocation" x="-134" y="72"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="194" id="KGk-i7-Jjw" customClass="RDAdvertTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="193.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nep-IV-Kb0" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="183.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="tij-iI-Dlv"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="rOt-ck-pBQ"/>
+                        </connections>
+                    </view>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="i6M-vG-BRC">
+                        <rect key="frame" x="152" y="146.5" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Nep-IV-Kb0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G73-Ar-6FT"/>
+                    <constraint firstAttribute="trailing" secondItem="Nep-IV-Kb0" secondAttribute="trailing" id="NNa-2P-rIs"/>
+                    <constraint firstItem="Nep-IV-Kb0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aVc-Hy-OH6"/>
+                    <constraint firstItem="i6M-vG-BRC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="fXX-oP-eWO"/>
+                    <constraint firstAttribute="bottom" secondItem="Nep-IV-Kb0" secondAttribute="bottom" constant="10" id="iuM-WT-VyX"/>
+                    <constraint firstItem="i6M-vG-BRC" firstAttribute="bottom" secondItem="Nep-IV-Kb0" secondAttribute="bottom" id="n51-lm-HuY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bannerICV" destination="Nep-IV-Kb0" id="coz-Gx-lIP"/>
+                <outlet property="pageC" destination="i6M-vG-BRC" id="53j-ku-J3K"/>
+            </connections>
+            <point key="canvasLocation" x="-30" y="119"/>
+        </tableViewCell>
+    </objects>
+</document>

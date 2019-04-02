@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="220" id="KGk-i7-Jjw" customClass="RecommendFlashTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="528" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="528" height="219.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7V-Wd-Mco">
+                        <rect key="frame" x="0.0" y="0.0" width="528" height="214.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerP.png" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-0p-06J">
+                                <rect key="frame" x="15" y="176.5" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="LRW-2Y-OAH"/>
+                                    <constraint firstAttribute="width" secondItem="MJT-0p-06J" secondAttribute="height" multiplier="1:1" id="hlV-gb-wDb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWZ-Zg-jod">
+                                <rect key="frame" x="15" y="20" width="498" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="         " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-9f-49h">
+                                <rect key="frame" x="38" y="178.5" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.67843137254901964" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="置顶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ1-G0-cQ6">
+                                <rect key="frame" x="488" y="178.5" width="25" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.054901960784313725" green="0.48627450980392156" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KWZ-Zg-jod" firstAttribute="leading" secondItem="f7V-Wd-Mco" secondAttribute="leading" constant="15" id="1jb-Sk-0ga"/>
+                            <constraint firstItem="hRR-9f-49h" firstAttribute="centerY" secondItem="MJT-0p-06J" secondAttribute="centerY" id="5Fs-wE-R72"/>
+                            <constraint firstItem="KWZ-Zg-jod" firstAttribute="top" secondItem="f7V-Wd-Mco" secondAttribute="top" constant="20" id="9oG-Ky-WSG"/>
+                            <constraint firstAttribute="trailing" secondItem="KWZ-Zg-jod" secondAttribute="trailing" constant="15" id="Dov-eV-FGr"/>
+                            <constraint firstItem="MJT-0p-06J" firstAttribute="leading" secondItem="f7V-Wd-Mco" secondAttribute="leading" constant="15" id="XTz-gW-FRX"/>
+                            <constraint firstItem="KWZ-Zg-jod" firstAttribute="top" secondItem="f7V-Wd-Mco" secondAttribute="top" constant="20" id="YTa-iL-kcz"/>
+                            <constraint firstItem="XQ1-G0-cQ6" firstAttribute="centerY" secondItem="hRR-9f-49h" secondAttribute="centerY" id="YTf-aW-X1b"/>
+                            <constraint firstAttribute="bottom" secondItem="MJT-0p-06J" secondAttribute="bottom" constant="20" id="eKv-zd-9WG"/>
+                            <constraint firstItem="hRR-9f-49h" firstAttribute="leading" secondItem="MJT-0p-06J" secondAttribute="trailing" constant="5" id="jAb-iI-hpu"/>
+                            <constraint firstAttribute="trailing" secondItem="XQ1-G0-cQ6" secondAttribute="trailing" constant="15" id="pq7-Tg-C55"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="f7V-Wd-Mco" secondAttribute="bottom" constant="5" id="1lV-R0-GN9"/>
+                    <constraint firstItem="f7V-Wd-Mco" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FAS-4K-ezP"/>
+                    <constraint firstAttribute="trailing" secondItem="f7V-Wd-Mco" secondAttribute="trailing" id="eQt-40-F1C"/>
+                    <constraint firstItem="f7V-Wd-Mco" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rIW-aP-c9d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLab" destination="KWZ-Zg-jod" id="BU9-FL-11L"/>
+                <outlet property="headImgV" destination="MJT-0p-06J" id="fS1-ex-9ul"/>
+                <outlet property="titleLab" destination="hRR-9f-49h" id="ure-Fs-Sz0"/>
+                <outlet property="topLab" destination="XQ1-G0-cQ6" id="SA5-Dy-zgR"/>
+            </connections>
+            <point key="canvasLocation" x="-279" y="139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="headerP.png" width="72" height="72"/>
+    </resources>
+</document>

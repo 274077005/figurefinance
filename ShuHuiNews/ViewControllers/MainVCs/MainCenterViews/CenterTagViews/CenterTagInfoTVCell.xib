@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="CenterTagInfoTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="125.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-3x-M3E">
+                        <rect key="frame" x="15" y="5" width="289" height="115.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-yI-fwQ">
+                                <rect key="frame" x="0.0" y="0.0" width="289" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-Rj-rgQ">
+                                        <rect key="frame" x="249" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fzu-Rj-rgQ" secondAttribute="height" id="Xgq-oz-oga"/>
+                                            <constraint firstAttribute="height" constant="30" id="jCP-Gv-KUA"/>
+                                        </constraints>
+                                        <state key="normal" image="centerEdit.png"/>
+                                        <connections>
+                                            <action selector="editBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xma-uy-aFO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标签信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR7-Wp-AS8">
+                                        <rect key="frame" x="10" y="0.0" width="61.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="UR7-Wp-AS8" secondAttribute="bottom" id="FJ6-Fd-2sF"/>
+                                    <constraint firstItem="UR7-Wp-AS8" firstAttribute="top" secondItem="fiX-yI-fwQ" secondAttribute="top" id="TVO-IL-bc3"/>
+                                    <constraint firstItem="UR7-Wp-AS8" firstAttribute="leading" secondItem="fiX-yI-fwQ" secondAttribute="leading" constant="10" id="YUv-oe-2G8"/>
+                                    <constraint firstAttribute="trailing" secondItem="fzu-Rj-rgQ" secondAttribute="trailing" constant="10" id="qLu-Pq-q0j"/>
+                                    <constraint firstAttribute="height" constant="30" id="sHU-f8-hjK"/>
+                                    <constraint firstItem="fzu-Rj-rgQ" firstAttribute="centerY" secondItem="fiX-yI-fwQ" secondAttribute="centerY" id="trW-Tw-Hef"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-fy-khz">
+                                <rect key="frame" x="0.0" y="30" width="289" height="85.5"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fiX-yI-fwQ" firstAttribute="leading" secondItem="3R2-3x-M3E" secondAttribute="leading" id="Dho-qu-upX"/>
+                            <constraint firstItem="fiX-yI-fwQ" firstAttribute="top" secondItem="3R2-3x-M3E" secondAttribute="top" id="Fub-UR-by0"/>
+                            <constraint firstAttribute="bottom" secondItem="VhK-fy-khz" secondAttribute="bottom" id="IhO-pv-HhC"/>
+                            <constraint firstAttribute="trailing" secondItem="fiX-yI-fwQ" secondAttribute="trailing" id="LVq-ah-JSc"/>
+                            <constraint firstAttribute="trailing" secondItem="VhK-fy-khz" secondAttribute="trailing" id="S9y-71-OGo"/>
+                            <constraint firstItem="VhK-fy-khz" firstAttribute="leading" secondItem="3R2-3x-M3E" secondAttribute="leading" id="UXy-Jx-wh4"/>
+                            <constraint firstItem="VhK-fy-khz" firstAttribute="top" secondItem="fiX-yI-fwQ" secondAttribute="bottom" id="x2p-kZ-YKL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3R2-3x-M3E" secondAttribute="bottom" constant="5" id="RH2-5B-xiR"/>
+                    <constraint firstItem="3R2-3x-M3E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="a87-vK-L0e"/>
+                    <constraint firstAttribute="trailing" secondItem="3R2-3x-M3E" secondAttribute="trailing" constant="15" id="bTK-5n-b8H"/>
+                    <constraint firstItem="3R2-3x-M3E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="rS7-KJ-mBW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="scrollV" destination="VhK-fy-khz" id="5OM-Ip-dlU"/>
+                <outlet property="shadowBV" destination="3R2-3x-M3E" id="gj5-VI-TGN"/>
+            </connections>
+            <point key="canvasLocation" x="-235" y="87"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="centerEdit.png" width="18" height="19"/>
+    </resources>
+</document>

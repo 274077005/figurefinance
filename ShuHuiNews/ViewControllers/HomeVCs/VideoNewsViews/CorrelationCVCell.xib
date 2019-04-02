@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CorrelationCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="490" height="450"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fpk-2o-8if">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="324.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fpk-2o-8if" secondAttribute="height" multiplier="185:125" id="tuP-vO-SzZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-8e-Drt">
+                    <rect key="frame" x="0.0" y="339.5" width="480" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Fpk-2o-8if" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fxc-9A-Lz5"/>
+                <constraint firstItem="OMy-8e-Drt" firstAttribute="trailing" secondItem="Fpk-2o-8if" secondAttribute="trailing" id="Zsk-iU-wrp"/>
+                <constraint firstItem="OMy-8e-Drt" firstAttribute="top" secondItem="Fpk-2o-8if" secondAttribute="bottom" constant="15" id="gDi-b7-60R"/>
+                <constraint firstAttribute="trailing" secondItem="Fpk-2o-8if" secondAttribute="trailing" constant="10" id="pDx-sb-cZp"/>
+                <constraint firstItem="OMy-8e-Drt" firstAttribute="leading" secondItem="Fpk-2o-8if" secondAttribute="leading" id="sqp-4O-Xow"/>
+                <constraint firstItem="Fpk-2o-8if" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uep-zY-GoS"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageV" destination="Fpk-2o-8if" id="210-Uz-xFr"/>
+                <outlet property="titleLab" destination="OMy-8e-Drt" id="IU8-uz-KUd"/>
+            </connections>
+            <point key="canvasLocation" x="-50" y="103"/>
+        </view>
+    </objects>
+</document>
