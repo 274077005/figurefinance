@@ -120,6 +120,7 @@
     NSMutableDictionary * bodyDic = [[NSMutableDictionary alloc]init];
     
     [bodyDic setObject:@6 forKey:@"num"];
+    [bodyDic setObject:@1 forKey:@"is_app"];
     
     [GYPostData PostInfomationWithDic:bodyDic UrlPath:JChoiceRoot Handler:^(NSDictionary *jsonDic, NSError * error) {
         
@@ -146,7 +147,7 @@
 //设置collectionView的item的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(SCREEN_WIDTH-20, 145);
+    return CGSizeMake(SCREEN_WIDTH, 145);
     
     
 }
@@ -195,8 +196,33 @@
     ChoiceBookModel * sectionModel = self.choiceModel.book_list[indexPath.section];
     
     ComListModel * listModel = sectionModel.comList[indexPath.row];
-    
+//    NSDictionary *extendDict = listModel.extendInfo[0];
+//    ExtendModel *extendModel = [ExtendModel mj_objectWithKeyValues:extendDict];
+    cell.userInfo = listModel.userInfo;
+    cell.extendInfo = listModel.extendInfo;
+    NSArray *extendArr = listModel.extendInfo;
+    //循环识别类型存储到数组
+    NSArray *arr = @[@"0",@"0",@"0"];
+    NSMutableArray *mutable = [NSMutableArray arrayWithArray:arr];
+    for (NSDictionary* dict in extendArr) {
+        if ([dict[@"type"] integerValue] == 2) {
+            //是视频
+            [mutable replaceObjectAtIndex:0 withObject:@"1"];
+        }else if ([dict[@"type"] integerValue] == 1){
+            //是音频
+            [mutable replaceObjectAtIndex:1 withObject:@"1"];
+        }else if ([dict[@"type"] integerValue] == 0){
+            //是电子书
+            [mutable replaceObjectAtIndex:2 withObject:@"1"];
+        }
+    }
+    cell.videoIconImageView.hidden = ![mutable[0] integerValue];
+    cell.audioIconImageView.hidden = ![mutable[1] integerValue];
+    cell.bookIconImageView.hidden = ![mutable[2] integerValue];
     cell.listModel = listModel;
+    cell.typeArray = mutable;
+//    cell.extendModel = extendModel;
+    
     [cell updateWithModel];
     return cell;
 }
@@ -204,9 +230,39 @@
     ChoiceBookModel * sectionModel = self.choiceModel.book_list[indexPath.section];
     
     ComListModel * listModel = sectionModel.comList[indexPath.row];
+//
+//    BookDetailVC * bookVC = [[BookDetailVC alloc]init];
+//    bookVC.bookId = listModel.theId;
     
-    BookDetailVC * bookVC = [[BookDetailVC alloc]init];
-    bookVC.bookId = listModel.theId;
-    [self.navigationController pushViewController:bookVC animated:YES];
+    //获取自定义的cell
+    BookCVCell *cell = (BookCVCell*)[self collectionView:collectionView cellForItemAtIndexPath:indexPath];
+    //读读取作品类型
+    //如果有视频先跳转到视频,以此类推
+    if([cell.typeArray[0] isEqualToString:@"1"]){
+        ChoiceVideoDetailViewController *videoVC = [[ChoiceVideoDetailViewController alloc] init];
+        videoVC.bookId = listModel.theId;
+        videoVC.type = 2;
+        [self.navigationController pushViewController:videoVC animated:YES];
+        return;
+    }else if([cell.typeArray[1] isEqualToString:@"1"]){
+        AudioViewController *audioVC = [[AudioViewController alloc] initWithNibName:@"AudioViewController" bundle:[NSBundle mainBundle]];
+        audioVC.bookId = listModel.theId;
+        audioVC.type = 1;
+        [self.navigationController pushViewController:audioVC animated:YES];
+        return;
+    }else if([cell.typeArray[2] isEqualToString:@"1"]){
+        ChoiceBookDetailViewController *bookVC = [[ChoiceBookDetailViewController alloc] init];
+        bookVC.bookId = listModel.theId;
+        bookVC.type = 0;
+        [self.navigationController pushViewController:bookVC animated:YES];
+        return;
+    }else {
+        ChoiceBookDetailViewController *bookVC = [[ChoiceBookDetailViewController alloc] init];
+        bookVC.bookId = listModel.theId;
+        bookVC.type = 0;
+        [self.navigationController pushViewController:bookVC animated:YES];
+        return;    }
+
+    
 }
 @end

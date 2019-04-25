@@ -43,6 +43,7 @@
 #import "YYEverColor.h"
 #import "GYTimer.h"
 #import "TZImagePickerController.h"
+#import "UIView+WHC_AutoLayout.h"
 //----------------------系统----------------------------
 
 //获取系统版本
@@ -117,6 +118,22 @@
 #define WD_BACKCOLOR [UIColor colorWithRed:247/255.0 green:248/255.0 blue:249/255.0 alpha:1] //背景色
 #define WD_LINECOLOR [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1] //线
 #define WD_BLUE [UIColor colorWithRed:14/255.0 green:124/255.0 blue:244/255.0 alpha:1] //背景色
+
+#define sliderHeight 49
+#define STATUS_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height//状态栏高度
+#define SCREEN_WINDOW_HEIGHT (SCREEN_HEIGHT-(STATUS_HEIGHT+44))
+#define kFont_Lable_20 [UIFont systemFontOfSize:20]
+#define kFont_Lable_19 [UIFont systemFontOfSize:19]
+#define kFont_Lable_18 [UIFont systemFontOfSize:18]
+#define kFont_Lable_17 [UIFont systemFontOfSize:17]
+#define kFont_Lable_16 [UIFont systemFontOfSize:16]
+#define kFont_Lable_15 [UIFont systemFontOfSize:15]
+#define kFont_Lable_14 [UIFont systemFontOfSize:14]
+#define kFont_Lable_13 [UIFont systemFontOfSize:13]
+#define kFont_Lable_12 [UIFont systemFontOfSize:12]
+#define kFont_Lable_10 [UIFont systemFontOfSize:10]
+#define kFontBlackColor GBCOLOR(30, 30, 30)
+#define kFontGrayColor RGB(0xa6a6a6)
 
 typedef NS_ENUM(NSInteger,GetDataType)
 {

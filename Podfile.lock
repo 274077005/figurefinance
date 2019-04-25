@@ -1,0 +1,51 @@
+PODS:
+  - AFNetworking (2.7.0):
+    - AFNetworking/NSURLConnection (= 2.7.0)
+    - AFNetworking/NSURLSession (= 2.7.0)
+    - AFNetworking/Reachability (= 2.7.0)
+    - AFNetworking/Security (= 2.7.0)
+    - AFNetworking/Serialization (= 2.7.0)
+    - AFNetworking/UIKit (= 2.7.0)
+  - AFNetworking/NSURLConnection (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.7.0)
+  - AFNetworking/Security (2.7.0)
+  - AFNetworking/Serialization (2.7.0)
+  - AFNetworking/UIKit (2.7.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - DOUAudioStreamer (0.2.11)
+  - GVUserDefaults (1.0.2)
+  - Mantle (1.5.5):
+    - Mantle/extobjc (= 1.5.5)
+  - Mantle/extobjc (1.5.5)
+  - MBProgressHUD (1.1.0)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - DOUAudioStreamer
+  - GVUserDefaults
+  - Mantle
+  - MBProgressHUD
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
+  DOUAudioStreamer: 8aefc3e80eb6c01ec89fa3c30743c660e8c55bae
+  GVUserDefaults: 52d48cf8ba578b40a1a76312b196dfc9134ba36a
+  Mantle: 1b29072a707453975b200a173cf77ec1e2810b75
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+
+PODFILE CHECKSUM: 825fda55c1a00123582ea8eb4e87c9038bef4324
+
+COCOAPODS: 1.4.0

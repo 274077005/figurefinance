@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "ApplePay.h"
+//我的订购 界面
 @interface MainWalletVC : BaseViewController
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeight;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLab;

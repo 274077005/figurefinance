@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,20 +22,20 @@
                         <rect key="frame" x="0.0" y="54" width="611" height="54"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainWriting.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wil-yI-mCI">
-                                <rect key="frame" x="15" y="15.5" width="24" height="24"/>
+                                <rect key="frame" x="15" y="15" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="TCV-zQ-a1X"/>
                                     <constraint firstAttribute="width" secondItem="Wil-yI-mCI" secondAttribute="height" id="h3M-JL-zgm"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-kI-xHP">
-                                <rect key="frame" x="49" y="1.5" width="73.5" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="73.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more.png" translatesAutoresizingMaskIntoConstraints="NO" id="aRz-Br-hLt">
-                                <rect key="frame" x="580" y="19.5" width="16" height="16"/>
+                                <rect key="frame" x="580" y="19" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="0i7-w0-jbS"/>
                                     <constraint firstAttribute="width" secondItem="aRz-Br-hLt" secondAttribute="height" id="3aR-Ih-6QS"/>
@@ -75,7 +74,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtn-g1-wL9">
-                                <rect key="frame" x="49" y="1.5" width="73.5" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="73.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -119,8 +118,8 @@
                                     <constraint firstAttribute="height" constant="24" id="bTe-XJ-5dc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的钱包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clo-qB-BD2">
-                                <rect key="frame" x="49" y="1.5" width="73.5" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的订购" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clo-qB-BD2">
+                                <rect key="frame" x="49" y="0.5" width="73.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,7 +164,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-2s-G7b">
-                                <rect key="frame" x="49" y="1.5" width="37" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="37" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +209,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的订单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-h3-FSb">
-                                <rect key="frame" x="49" y="1.5" width="73.5" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="73.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -248,20 +247,20 @@
                         <rect key="frame" x="0.0" y="270" width="611" height="54"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity.png" translatesAutoresizingMaskIntoConstraints="NO" id="oYE-GK-Onn">
-                                <rect key="frame" x="15" y="15.5" width="24" height="24"/>
+                                <rect key="frame" x="15" y="15" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="TtT-CK-sOi"/>
                                     <constraint firstAttribute="width" secondItem="oYE-GK-Onn" secondAttribute="height" id="vZX-Rl-BSB"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动报名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZk-2F-4yp">
-                                <rect key="frame" x="49" y="1.5" width="73.5" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="73.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more.png" translatesAutoresizingMaskIntoConstraints="NO" id="PCI-l4-SZd">
-                                <rect key="frame" x="580" y="19.5" width="16" height="16"/>
+                                <rect key="frame" x="580" y="19" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="4oq-Pi-0YJ"/>
                                     <constraint firstAttribute="width" secondItem="PCI-l4-SZd" secondAttribute="height" id="as1-NI-b4h"/>
@@ -300,7 +299,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快讯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuw-XZ-kNf">
-                                <rect key="frame" x="49" y="1.5" width="37" height="52"/>
+                                <rect key="frame" x="49" y="0.5" width="37" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -381,7 +380,7 @@
     <resources>
         <image name="activity.png" width="24" height="24"/>
         <image name="mainBell.png" width="24" height="24"/>
-        <image name="mainFlash.png" width="15" height="15"/>
+        <image name="mainFlash.png" width="24" height="24"/>
         <image name="mainOrder.png" width="24" height="24"/>
         <image name="mainSet.png" width="24" height="24"/>
         <image name="mainWriting.png" width="24" height="24"/>

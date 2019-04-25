@@ -135,7 +135,7 @@
 
 #define JTradRecord       @"zixun/tran_log"    //交易记录
 
-#define JBookDetail       @"zixun/book_detail"    //图书详情
+#define JBookDetail       @"zixun/getBookDetail"    //图书详情
 
 #define JOrderDetail      @"zixun/order_detail"    //订单信息
 
@@ -192,4 +192,11 @@
 #define JGetLaunchAdvert      @"zixun/getScreenAd"    //获取启动广告
 
 #define JAddFlash      @"zixun/addFlash"    //新增快讯
+
+#define JMyReadListUrl @"zixun/authorSubList" //获取订阅列表
+
+#define JMyReadStatus  @"zixun/authorSub" // 订阅/取消订阅
+
+#define JMyPayBuyListUrl @"zixun/payBuyList" //我的订购-我的购买
+
 #endif /* NetDefine_h */

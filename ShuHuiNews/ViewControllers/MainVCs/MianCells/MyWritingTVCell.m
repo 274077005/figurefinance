@@ -14,6 +14,7 @@
 #import "ActivityApplyVC.h"
 #import "OrderListVC.h"
 #import "MainFlashVC.h"
+#import "MyOrderViewController.h"
 @implementation MyWritingTVCell
 
 - (void)awakeFromNib {
@@ -74,8 +75,10 @@
 }
 -(void)walletBVClick
 {
-    MainWalletVC * walletVC = [[MainWalletVC alloc]init];
-    [self.viewContoller.navigationController pushViewController:walletVC animated:YES];
+//    MainWalletVC * walletVC = [[MainWalletVC alloc]init];
+//    [self.viewContoller.navigationController pushViewController:walletVC animated:YES];
+    MyOrderViewController *myOrder= [[MyOrderViewController alloc] init];
+    [self.viewContoller.navigationController pushViewController:myOrder animated:YES];
 }
 -(void)orderBVClick
 {

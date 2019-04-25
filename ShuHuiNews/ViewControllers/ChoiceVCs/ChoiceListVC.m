@@ -74,6 +74,8 @@
     
     [bodyDic setObject:@(_index) forKey:@"count"];
     [bodyDic setObject:self.category_id forKey:@"category_id"];
+//    [bodyDic setObject:@"3" forKey:@"category_id"];
+    [bodyDic setObject:@"10" forKey:@"num"];
     [GYPostData PostInfomationWithDic:bodyDic UrlPath:JChoiceList Handler:^(NSDictionary *jsonDic, NSError * error) {
         [self.tableView.mj_header endRefreshing];
         self.tableView.mj_footer.hidden = NO;
@@ -81,7 +83,7 @@
             if ([jsonDic[@"code"] integerValue] == 1) {
 
                 NSArray *modelArr;
-                modelArr = [ComListModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"]];
+                modelArr = [ComListModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"data"]];
                 if (_getDataType == GetTypeHeader) {
                     [_newsArr removeAllObjects];
                     if (modelArr.count < 10) {
@@ -137,7 +139,7 @@
     cell.titleLab.text = model.name;
     cell.publishLab.text = model.publish;
     cell.authorLab.text = [NSString stringWithFormat:@"作者:%@",model.author];
-    cell.priceLab.text = [NSString stringWithFormat:@"￥%@",model.price];
+    cell.priceLab.text = [NSString stringWithFormat:@"%@金豆",model.price];
     [cell.coverImgV sd_setImageWithURL:model.img];
     
     return cell;

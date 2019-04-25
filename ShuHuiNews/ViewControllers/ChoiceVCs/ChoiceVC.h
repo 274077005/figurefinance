@@ -14,6 +14,9 @@
 #import "ChoiceModel.h"
 #import "BookTagHeaderV.h"
 #import "BookDetailVC.h"
+#import "AudioViewController.h"
+#import "ChoiceVideoDetailViewController.h"
+#import "ChoiceBookDetailViewController.h"
 
 //#import "SDCycleScrollView.h"
 @interface ChoiceVC : BaseViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate>

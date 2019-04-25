@@ -41,7 +41,7 @@
     self.bannerICV.backgroundColor = [UIColor whiteColor];
     //在这选风格
     self.bannerICV.layer.masksToBounds = YES;
-    self.bannerICV.type = iCarouselTypeLinear;
+    self.bannerICV.type = iCarouselTypeRotary;
     self.bannerICV.dataSource = self;
     self.bannerICV.delegate = self;
     self.bannerICV.pagingEnabled = YES;
@@ -81,12 +81,16 @@
 }
 
 
-#pragma mark iCarousel methods
+#pragma mark iCarousel methods//轮播图
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    
-    return _dataArr.count;
+    //count<6
+    if(_dataArr.count<6){
+        return _dataArr.count;
+    }else{
+        return 5;
+    }
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
@@ -104,10 +108,13 @@
     }
     ChoiceBannerModel * model = [ChoiceBannerModel mj_objectWithKeyValues:_dataArr[index]];
 //    NSLog(@"%@",model.image_url);
-    ChView.imgV.backgroundColor = randomColor;
+//    ChView.imgV.backgroundColor = randomColor;
+    ChView.imgV.backgroundColor = [UIColor whiteColor];
     ChView.titleLab.text = model.title;
     NSLog(@"%@",model.title);
     [ChView.imgV sd_setImageWithURL:model.banner];
+    //图片自适应
+    ChView.imgV.contentMode = UIViewContentModeScaleAspectFit;
 //    ChView.titleLab.hidden = YES;
 
 

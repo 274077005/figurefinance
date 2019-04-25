@@ -14,8 +14,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLab;
 
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *videoIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *audioIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *bookIconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+
 
 @property(nonatomic,strong)ComListModel * listModel;
+@property(nonatomic,strong)ExtendModel * extendModel;
+
+@property(nonatomic,strong)NSArray *typeArray;
+
+@property(nonatomic,strong)NSDictionary *userInfo;
+@property(strong, nonatomic) NSArray *extendInfo;
 
 -(void)updateWithModel;
 @end

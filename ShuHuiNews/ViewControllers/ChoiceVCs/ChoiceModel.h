@@ -19,6 +19,8 @@
 @property(nonatomic,copy)NSString * name;
 @property(nonatomic,copy)NSString * publish;
 @property(nonatomic,copy)NSString * author;
+@property(strong, nonatomic) NSArray *extendInfo;
+@property(strong, nonatomic) NSDictionary *userInfo;
 @end
 
 @interface ChoiceBookModel : NSObject
@@ -46,6 +48,23 @@
 
 @property (strong, nonatomic) NSArray * banner;
 @property (strong, nonatomic) NSArray * book_list;
+
+@end
+
+@interface ExtendModel : NSObject
+
+@property (strong,nonatomic) NSString*  price;
+@property (strong,nonatomic) NSString*  type;
+
+
+@end
+
+@interface UserInfoModel : NSObject
+
+@property (strong,nonatomic) NSString*  userId;
+@property (strong,nonatomic) NSString*  nickname;
+@property (strong,nonatomic) NSString*  userAvatar;
+@property (strong,nonatomic) NSString*  fens_num;
 
 @end
 

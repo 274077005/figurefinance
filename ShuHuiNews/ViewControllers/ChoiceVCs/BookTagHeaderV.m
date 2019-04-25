@@ -22,6 +22,7 @@
     ChoiceListVC * listVC = [[ChoiceListVC alloc]init];
     
     listVC.category_id = self.sectionModel.category_id;
+//    listVC.category_id = @"3";
     listVC.titleStr= self.sectionModel.category_name;
     
     [self.viewContoller.navigationController pushViewController:listVC animated:YES];

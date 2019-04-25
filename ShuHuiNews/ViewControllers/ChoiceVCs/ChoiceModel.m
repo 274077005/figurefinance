@@ -48,3 +48,21 @@
              };
 }
 @end
+
+@implementation ExtendModel
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{
+             
+             };
+}
+@end
+
+@implementation UserInfoModel
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"userId": @"id",
+             @"userAvatar": @"image"
+             };
+}
+@end
