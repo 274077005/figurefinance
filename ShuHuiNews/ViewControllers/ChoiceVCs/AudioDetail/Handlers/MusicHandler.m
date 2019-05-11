@@ -43,7 +43,7 @@
         
         [dict setObject:music.name forKey:MPMediaItemPropertyTitle];
         [dict setObject:music.artistName forKey:MPMediaItemPropertyArtist];
-        [dict setObject:[MusicViewController sharedInstance].musicTitle forKey:MPMediaItemPropertyAlbumTitle];
+        //[dict setObject:[MusicViewController sharedInstance].musicTitle forKey:MPMediaItemPropertyAlbumTitle];
         [dict setObject:@(audioDurationSeconds) forKey:MPMediaItemPropertyPlaybackDuration];
         CGFloat playerAlbumWidth = (SCREEN_WIDTH - 16) * 2;
         UIImageView *playerAlbum = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, playerAlbumWidth, playerAlbumWidth)];

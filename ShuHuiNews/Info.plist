@@ -74,7 +74,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>用于扫码登录用户平台或加好友, 是否允许使用您的相机？</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>"数汇资讯"希望给您添加图片</string>
+	<string>&quot;数汇资讯&quot;希望给您添加图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>用于发布图片，是否允许访问您的媒体资料库？</string>
 	<key>UILaunchStoryboardName</key>
@@ -99,6 +99,10 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
 	</array>
 </dict>
 </plist>

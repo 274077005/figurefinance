@@ -31,6 +31,10 @@
 #import "SpecialDetailVC.h"
 #import "VideoDetailVC.h"
 #import "RingDetailModel.h"
+#import "RDWorksCell.h"
+#import "ZWWorksHeaderView.h"
+
+
 @interface RingDetailVC : BaseViewController
 
 

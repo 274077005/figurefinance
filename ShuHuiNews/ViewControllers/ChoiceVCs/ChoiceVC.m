@@ -248,6 +248,7 @@
         AudioViewController *audioVC = [[AudioViewController alloc] initWithNibName:@"AudioViewController" bundle:[NSBundle mainBundle]];
         audioVC.bookId = listModel.theId;
         audioVC.type = 1;
+        audioVC.price = cell.extendInfo.lastObject[@"price"];
         [self.navigationController pushViewController:audioVC animated:YES];
         return;
     }else if([cell.typeArray[2] isEqualToString:@"1"]){

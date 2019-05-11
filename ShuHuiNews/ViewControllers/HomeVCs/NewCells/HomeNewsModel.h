@@ -94,3 +94,14 @@
 
 @end
 
+@interface HomeAuthorModel : NSObject
+
+
+@property(nonatomic,copy)NSString * works_id;
+@property(nonatomic,copy)NSURL * img;
+@property(nonatomic,copy)NSString * name;
+@property(nonatomic,copy)NSString * author;
+@property(nonatomic,assign)NSInteger click_num;
+
+@end
+

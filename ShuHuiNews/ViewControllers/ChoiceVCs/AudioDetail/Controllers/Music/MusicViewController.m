@@ -76,6 +76,33 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     _originArray = @[].mutableCopy;
     _randomArray = [[NSMutableArray alloc] initWithCapacity:0];
     [self addPanRecognizer];
+    
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getDataDetail) name:@"dataDetail" object:nil];
+    
+    NSDictionary *musicsDict = [self dictionaryWithContentsOfJSONString:@"music_list.json"];
+    self.musicEntities = [MusicEntity arrayOfEntitiesFromArray:musicsDict[@"data"]].mutableCopy;
+    
+    [self createStreamer];
+}
+
+- (void)getDataDetail{
+    NSDictionary *dataDetail = [UserDefaults objectForKey:@"dataDetail"];
+    NSArray *audioData = dataDetail[@"audioTypeData"];
+    NSString *audioId = audioData.firstObject[@"videoId"];
+    //请求地址
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setObject:audioId forKey:@"video_id"];
+    
+    [GYPostData GetInfomationWithDic:param UrlPath:JGetPlayInfo Handler:^(NSDictionary *jsonDict, NSError *error) {
+        if(!error){
+            NSLog(@"%@",jsonDict);
+            
+            //赋值给entity
+            
+        }
+        
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -93,7 +120,20 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     [_originArray removeAllObjects];
     [self loadOriginArrayIfNeeded];
     
+    NSDictionary *musicsDict = [self dictionaryWithContentsOfJSONString:@"music_list.json"];
+    self.musicEntities = [MusicEntity arrayOfEntitiesFromArray:musicsDict[@"data"]].mutableCopy;
+    
     [self createStreamer];
+}
+
+- (NSDictionary *)dictionaryWithContentsOfJSONString:(NSString *)fileLocation {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    __autoreleasing NSError* error = nil;
+    id result = [NSJSONSerialization JSONObjectWithData:data
+                                                options:kNilOptions error:&error];
+    if (error != nil) return nil;
+    return result;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -134,7 +174,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     _musicNameLabel.text = _musicEntity.name;
     _singerLabel.text = _musicEntity.artistName;
     _musicTitleLabel.text = _musicTitle;
-    [self setupBackgroudImage];
+    //[self setupBackgroudImage];
     [self checkMusicFavoritedIcon];
 }
 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="AudioFloatTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-JS-qNV">
+                        <rect key="frame" x="15" y="25" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ETc-4k-Wfi"/>
+                            <constraint firstAttribute="width" constant="50" id="RQR-ez-N0V"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="春江花月夜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fla-Ai-ygd">
+                        <rect key="frame" x="71" y="25" width="150" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Yez-97-EAS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB8-am-sIc">
+                        <rect key="frame" x="71" y="64" width="100" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="dMM-LV-flE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.66666666669999997" green="0.67843137249999996" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-qp-Wuu">
+                        <rect key="frame" x="289" y="40" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6Le-vL-ZNp"/>
+                            <constraint firstAttribute="height" constant="20" id="7sW-nz-qnR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="+关注">
+                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.66666666669999997" green="0.67843137249999996" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="clickFocusButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="44C-kc-xJc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nB8-am-sIc" firstAttribute="leading" secondItem="Fla-Ai-ygd" secondAttribute="leading" id="0qL-jn-FZb"/>
+                    <constraint firstItem="oP5-JS-qNV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="4sN-r0-ceI"/>
+                    <constraint firstItem="Fla-Ai-ygd" firstAttribute="leading" secondItem="oP5-JS-qNV" secondAttribute="trailing" constant="6" id="KYV-PU-98U"/>
+                    <constraint firstItem="Fla-Ai-ygd" firstAttribute="top" secondItem="oP5-JS-qNV" secondAttribute="top" id="OBX-US-dr6"/>
+                    <constraint firstAttribute="trailing" secondItem="AXy-qp-Wuu" secondAttribute="trailing" constant="20" id="On8-py-YCV"/>
+                    <constraint firstItem="oP5-JS-qNV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QLE-Pr-acg"/>
+                    <constraint firstItem="AXy-qp-Wuu" firstAttribute="centerY" secondItem="oP5-JS-qNV" secondAttribute="centerY" id="h1X-MK-VYg"/>
+                    <constraint firstItem="nB8-am-sIc" firstAttribute="bottom" secondItem="oP5-JS-qNV" secondAttribute="bottom" id="kYB-yx-3SR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="avatarImageView" destination="oP5-JS-qNV" id="CNP-Ua-hZV"/>
+                <outlet property="focusButton" destination="AXy-qp-Wuu" id="JJm-rh-5f8"/>
+                <outlet property="focusLabel" destination="nB8-am-sIc" id="in8-SK-CmH"/>
+                <outlet property="nameLabel" destination="Fla-Ai-ygd" id="O0Z-nc-KGk"/>
+            </connections>
+            <point key="canvasLocation" x="-62" y="-20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="appIcon.png" width="120" height="120"/>
+    </resources>
+</document>

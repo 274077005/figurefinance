@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioDetailAlikeViewController : UITableViewController
-
+@property (nonatomic, assign) BOOL vcCanScroll;
+@property (nonatomic,strong) UIViewController *VC;
+@property (nonatomic,strong) NSDictionary *dataDict;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 #import "RDCommentTVCell.h"
+#import "ZWArticleListViewController.h"
 
 @implementation RDCommentTVCell
 {
@@ -42,6 +43,13 @@
     listVC.companyId = _companyId;
     [self.viewContoller.navigationController pushViewController:listVC animated:YES];
 }
+
+//更多资讯
+- (IBAction)moreArticle:(id)sender {
+    
+    
+}
+
 
 -(void)updateWithModel
 {
@@ -176,4 +184,10 @@
     [self commentToOtherWithModel:coModel];
 }
 
+- (IBAction)clickMoreArticle:(id)sender {
+    ZWArticleListViewController *articleController = [[ZWArticleListViewController alloc] init];
+    articleController.articleList = _articleList;
+    [self.viewContoller.navigationController pushViewController:articleController animated:YES];
+    
+}
 @end

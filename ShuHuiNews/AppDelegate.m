@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "RootTabbarVC.h"
 #import "LaunchAdvertVC.h"
+#import "MusicViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -69,7 +71,44 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Basic setup
+    [self basicSetup];
     return YES;
+}
+
+
+- (void)basicSetup {
+    // Remove control
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+# pragma mark - Remote control
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)receivedEvent {
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        switch (receivedEvent.subtype) {
+            case UIEventSubtypeRemoteControlPause:
+                [[MusicViewController sharedInstance].streamer pause];
+                break;
+            case UIEventSubtypeRemoteControlStop:
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                [[MusicViewController sharedInstance].streamer play];
+                break;
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                [[MusicViewController sharedInstance] playNextMusic:nil];
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [[MusicViewController sharedInstance] playPreviousMusic:nil];
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 //监听网络情况

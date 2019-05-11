@@ -33,6 +33,9 @@
 
 @property(nonatomic,copy)void(^commentBlock)(void);
 
+@property (nonatomic,strong)NSArray *articleList;
+
+- (IBAction)clickMoreArticle:(id)sender;
 
 
 @end

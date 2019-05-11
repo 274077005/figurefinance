@@ -57,3 +57,17 @@
 @implementation HomeBannerModel
 
 @end
+
+@implementation HomeAuthorModel
+
+//替换关键字
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"works_id": @"id"
+             };
+}
+
+
+
+@end

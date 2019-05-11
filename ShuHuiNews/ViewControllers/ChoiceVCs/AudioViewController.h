@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy,nonatomic)NSString *bookId;
 @property (assign,nonatomic)NSInteger type;
 @property (strong,nonatomic)NSDictionary *bookDetailDict;
+@property (strong, nonatomic) NSString *price;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 

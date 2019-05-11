@@ -12,6 +12,7 @@
 {
     NSMutableArray * _userMsgArr;
     NSMutableArray * _newsArr;
+    NSMutableArray * _worksArr;
 }
 
 @end
@@ -74,6 +75,10 @@
                NSArray * modelArr = [HomeNewsModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"articleList"]];
                 
                 NSMutableArray * arr = [self calculateCellHeightWithArr:modelArr];
+                
+                [_worksArr removeAllObjects];
+                NSArray *workArr = [HomeAuthorModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"authorList"]];
+                [_worksArr addObjectsFromArray:workArr];
                 
                 [_newsArr addObjectsFromArray:arr];
                 [self.tableView reloadData];
@@ -254,14 +259,14 @@
     //文字流广告
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeWorldAdvertTVCell" bundle:nil] forCellReuseIdentifier:@"HomeWorldCellId"];
     
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"RDWorksCell" bundle:nil] forCellReuseIdentifier:@"HomeWorksCellId"];
     
 }
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -271,8 +276,15 @@
     if (section == 0) {
         
         return _userMsgArr.count;
+    }else if(section == 1){
+        //return _newsArr.count;
+        if (_newsArr.count>3) {
+            return 3;
+        }else{
+            return _newsArr.count;
+        }
     }else{
-        return _newsArr.count;
+        return _worksArr.count;
     }
 
 }
@@ -287,12 +299,10 @@
         return detailModel.cellHeight;
     }else{
         HomeNewsModel *newsModel = _newsArr[indexPath.row];
-        
         return newsModel.cellHeight;
     }
     
     return 100;
-    
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -359,6 +369,8 @@
             cell.deModel = detailModel;
             cell.companyId = _writeId;
             
+            cell.articleList = _newsArr;
+            
             [cell updateWithModel];
             return cell;
         }else if (detailModel.news_type == 88){
@@ -397,6 +409,15 @@
             return cell;
         }
     }
+    
+    //添加作品
+    if (indexPath.section==2) {
+         HomeAuthorModel *worksModel = _worksArr[indexPath.row];
+        RDWorksCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeWorksCellId" forIndexPath:indexPath];
+        cell.worksModel = worksModel;
+        return cell;
+    }
+   
     
     HomeNewsModel *newsModel = _newsArr[indexPath.row];
     if (newsModel.news_type == 6) {
@@ -557,6 +578,23 @@
             
         }];
     }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (_userMsgArr.count&&section == 2) {
+        //作品列表
+        ZWWorksHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"ZWWorksHeaderView" owner:nil options:nil].lastObject;
+        headerView.worksList = _worksArr;
+        return headerView;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section==2) {
+        return 60;
+    }
+    return 0;
 }
 /*
  #pragma mark - Navigation

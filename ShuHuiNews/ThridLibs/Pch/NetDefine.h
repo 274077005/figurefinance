@@ -199,4 +199,12 @@
 
 #define JMyPayBuyListUrl @"zixun/payBuyList" //我的订购-我的购买
 
+#define JMyAddComment @"zixun/addAppBookComments" //添加评论
+
+#define JMyAttention @"zixun/fouseUser" //关注作者
+
+#define JPay @"zixun/payBuy" //购买
+
+#define JGetPlayInfo @"zixun/getPlayInfo" //获取视频地址
+
 #endif /* NetDefine_h */

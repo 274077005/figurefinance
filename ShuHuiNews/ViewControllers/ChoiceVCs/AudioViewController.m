@@ -12,16 +12,19 @@
 #import "AudioDetailAlikeViewController.h"
 #import "FDSlideBar.h"
 #import "GestureTableView.h"
-#import "FloatContainerCell.h"
+//#import "FloatContainerCell.h"
 #import "FloatTableCell.h"
 #import "BookDetailHeaderView.h"
 #import "AudioDetailHeaderView.h"
 #define kIPhoneX ([UIScreen mainScreen].bounds.size.height == 812.0)
 #import "MusicViewController.h"
+#import "AudioFloatContainerCell.h"
+#import "AudioFloatTableCell.h"
+
 
 @interface AudioViewController ()<UITableViewDataSource,UITableViewDelegate,FloatContainerCellDelegate>
 //书籍作者cell
-@property (nonatomic,strong) FloatContainerCell *containerCell;
+@property (nonatomic,strong) AudioFloatContainerCell *containerCell;
 //滚动模块
 @property (nonatomic,strong) FDSlideBar *sliderView;
 
@@ -32,9 +35,15 @@
 //书籍介绍视图
 @property (nonatomic,strong) BookDetailHeaderView *bookDetailHeaderView;
 @property (nonatomic,strong) AudioDetailHeaderView *audioDetailHeaderView;
+@property (nonatomic,strong) NSDictionary *userInfoDict;
+@property (nonatomic,strong) NSDictionary *dataDict;
 @end
 
 @implementation AudioViewController
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,7 +65,41 @@
     
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeScrollStatus) name:@"leaveTop" object:nil];
     
+    //获取初始化音频
+    //[self getFirstAudio];
     
+    
+}
+
+- (void)getFirstAudio {
+    //读取第一章节的音频
+    
+    NSMutableDictionary * bodyDic = [[NSMutableDictionary alloc]init];
+    NSInteger num = [self.bookId integerValue];
+    NSNumber *bookId = [NSNumber numberWithInteger:num];
+    [bodyDic setObject:bookId forKey:@"book_id"];
+    [bodyDic setObject:@1 forKey:@"p"];
+    [bodyDic setObject:@10 forKey:@"limit"];
+    NSNumber *type = [NSNumber numberWithInteger:self.type];
+    [bodyDic setObject:type forKey:@"type"];
+    
+    
+    [GYPostData PostInfomationWithDic:bodyDic UrlPath:JBookDetail Handler:^(NSDictionary *jsonDic, NSError * error) {
+        
+        if (!error) {
+            if ([jsonDic[@"code"] integerValue] == 1) {
+                self.bookDetailDict = jsonDic[@"data"][@"bookDetail"];
+                self.dataDict = jsonDic[@"data"];
+                [UserDefaults setObject:self.bookDetailDict forKey:@"BookDetail"];
+                [UserDefaults setObject:self.dataDict forKey:@"dataDetail"];
+                //                dispatch_sync(dispatch_get_main_queue(), ^{
+                [self initUiWithData];
+                //                });
+            }
+        }else{
+            
+        }
+    }];
 }
 
 - (void)changeScrollStatus{
@@ -70,6 +113,7 @@
     //_audioDetailHeaderView.dataAry = @[@"",@"",@"",@"",@"",@""];
     _tableView.tableHeaderView=_audioDetailHeaderView;
 }
+
 - (void)rightItemView
 {
     UIButton *videoButton = [self createBtnItemImageName:@"video_icon"];
@@ -97,22 +141,27 @@
 }
 - (void)readCache {
     NSDictionary *bookDetail = [UserDefaults dictionaryForKey:@"BookDetail"];
+    NSDictionary *dataDict = [UserDefaults dictionaryForKey:@"dataDetail"];
+    if(dataDict!=nil){
+        self.dataDict = dataDict;
+    }
     if (bookDetail==nil) {
 
     }else {
         self.bookDetailDict = bookDetail;
         [self initUiWithData];
     }
+ 
 
 }
 
 - (void)initUiWithData{
     NSDictionary *userInfoDict = self.bookDetailDict[@"userInfo"];
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:userInfoDict[@"image"]]];
-
-    self.nameLabel.text = userInfoDict[@"nickname"];
-    self.focusLabel.text = [NSString stringWithFormat:@"%@关注", userInfoDict[@"fens_num"]];
-    
+    _userInfoDict = userInfoDict;
+    //[self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:userInfoDict[@"image"]]];
+//    self.nameLabel.text = userInfoDict[@"nickname"];
+//    self.focusLabel.text = [NSString stringWithFormat:@"%@关注", userInfoDict[@"fens_num"]];
+    [self.tableView reloadData];
     //判断是否已关注作者
     
     //判断作品是否已经购买
@@ -125,6 +174,7 @@
         self.priceButton.userInteractionEnabled = NO;
         
     }
+
     
 }
 - (void)getData {
@@ -143,9 +193,14 @@
         if (!error) {
             if ([jsonDic[@"code"] integerValue] == 1) {
                 self.bookDetailDict = jsonDic[@"data"][@"bookDetail"];
+                self.dataDict = jsonDic[@"data"];
                 [UserDefaults setObject:self.bookDetailDict forKey:@"BookDetail"];
-//                dispatch_sync(dispatch_get_main_queue(), ^{
+                [UserDefaults setObject:self.dataDict forKey:@"dataDetail"];
+                //                dispatch_sync(dispatch_get_main_queue(), ^{
                     [self initUiWithData];
+                
+                //发出通知
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"dataDetail" object:nil];
 //                });
             }
         }else{
@@ -160,14 +215,16 @@
     _priceLabel = priceLabel;
     priceLabel.text = @"999金豆";
     priceLabel.backgroundColor = [UIColor whiteColor];
-    priceLabel.textAlignment = UITextAlignmentRight;
+    priceLabel.textAlignment = UITextAlignmentCenter;
     [self.view addSubview:priceLabel];
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     [priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.mas_equalTo(0);
-        make.width.mas_equalTo(width/2-20);
+        make.width.mas_equalTo(width/2);
         make.height.mas_equalTo(40);
     }];
+    
+    priceLabel.text = [NSString stringWithFormat:@"%@金豆",_price];
     
     UIButton *priceButton= [[UIButton alloc] init];
     _priceButton = priceButton;
@@ -178,7 +235,7 @@
     
     [priceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.bottom.mas_equalTo(0);
-        make.left.equalTo(_priceLabel.mas_right).offset(20);
+        make.left.equalTo(_priceLabel.mas_right).offset(0);
         make.height.mas_equalTo(40);
     }];
     
@@ -188,9 +245,23 @@
 - (void)clickPriceButton{
     //购买作品
     //跳转到订单详情页面
-    ZWOrderDetailViewController *orderDetailViewController = [[ZWOrderDetailViewController alloc] initWithNibName:@"ZWOrderDetailViewController" bundle:nil];
-    
-    [self.navigationController pushViewController:orderDetailViewController animated:YES];
+    ZWOrderDetailViewController *orderDetailViewController = [[ZWOrderDetailViewController alloc] init];
+    orderDetailViewController.paySuccessBlock = ^{
+        //设置为已购买
+        self.priceButton.backgroundColor = [UIColor grayColor];
+        [self.priceButton setTitle:@"已购买" forState:UIControlStateNormal];
+        self.priceButton.userInteractionEnabled = NO;
+        
+        //重新读取数据
+        [self getData];
+        
+        //发送通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"fresh" object:nil];
+    };
+    orderDetailViewController.dataDict = self.dataDict;
+    orderDetailViewController.bookDict = self.dataDict[@"bookDetail"];
+    orderDetailViewController.price = self.price;
+    [self.navigationController pushViewController:orderDetailViewController animated:YES]; 
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -256,19 +327,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
-        FloatTableCell *clientCell=[tableView dequeueReusableCellWithIdentifier:@"float"];
+        AudioFloatTableCell *clientCell=[tableView dequeueReusableCellWithIdentifier:@"float"];
         if (clientCell==nil) {
-            clientCell=[[[NSBundle mainBundle]loadNibNamed:@"FloatTableCell" owner:self options:nil]lastObject];
+            clientCell=[[[NSBundle mainBundle]loadNibNamed:@"AudioFloatTableCell" owner:self options:nil]lastObject];
         }
         clientCell.clipsToBounds=YES;
         clientCell.selectionStyle=UITableViewCellSelectionStyleNone;
         clientCell.tag=indexPath.row;
         
+        clientCell.isFocus = self.bookDetailDict[@"fouseUser"];
+        clientCell.dict = self.bookDetailDict[@"userInfo"];
+        
         return clientCell;
     }
-    FloatContainerCell *contain=[tableView dequeueReusableCellWithIdentifier:@"container"];
-    contain=[[FloatContainerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"container"];
+    AudioFloatContainerCell *contain=[tableView dequeueReusableCellWithIdentifier:@"container"];
+    contain=[[AudioFloatContainerCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"container"];
     contain.VC=self;
+    contain.dataDict = self.dataDict;
     self.containerCell=contain;
     contain.delegate=self;
     return contain;

@@ -7,33 +7,74 @@
 //
 
 #import "AudioDetailAlikeViewController.h"
+#import "MediaItemModel.h"
+#import "MediaItemCell.h"
 
 @interface AudioDetailAlikeViewController ()
-
+{
+    GetDataType _getDataType;
+    NSInteger _index;
+}
+@property (nonatomic,strong) NSMutableArray *dataAry;
 @end
 
 @implementation AudioDetailAlikeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [self initDataAry];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+}
+-(void)initDataAry{
+    _dataAry = [[NSMutableArray alloc] init];
+    //测试用的
+    for (int i=0; i<10; i++) {
+        MediaItemModel *model = [[MediaItemModel alloc] init];
+        [_dataAry addObject:model];
+    }
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (!self.vcCanScroll) {
+        scrollView.contentOffset = CGPointZero;
+    }
+    if (scrollView.contentOffset.y <= 0) {
+        self.vcCanScroll = NO;
+        scrollView.contentOffset = CGPointZero;
+        //到顶通知父视图改变状态
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"leaveTop" object:nil];
+    }
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.dataAry.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *const cid = @"MyReadCid";
+    MediaItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cid];
+    if (!cell) {
+        cell = [[MediaItemCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cid];
+    }
+    MediaItemModel *data = self.dataAry[indexPath.row];
+    cell.model = data;
+    cell.cancelButtonClickedBlock = ^{
+        //        [self cancelReadWith:data index:indexPath];
+    };
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 120;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //    [_VC.navigationController pushViewController:[NewSkipViewController new] animated:YES];
 }
 
 /*

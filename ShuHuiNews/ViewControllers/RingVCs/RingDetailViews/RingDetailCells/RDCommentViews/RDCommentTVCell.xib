@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -63,20 +62,42 @@
                                 <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-w4-wpa">
+                                <rect key="frame" x="292" y="0.5" width="30" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="更多">
+                                    <color key="titleColor" red="0.66666666669999997" green="0.67843137249999996" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickMoreArticle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pDC-s9-zN7"/>
+                                    <action selector="moreArticle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lNR-5c-eEs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more.png" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-n7-52R">
+                                <rect key="frame" x="324" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="5Os-v5-I3Y"/>
+                                    <constraint firstAttribute="height" constant="20" id="vQY-Lc-YVW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="0Qc-Du-oXM"/>
                             <constraint firstItem="A02-XU-xXb" firstAttribute="top" secondItem="KLx-ud-Nq3" secondAttribute="top" id="COQ-SC-qlM"/>
                             <constraint firstAttribute="bottom" secondItem="A02-XU-xXb" secondAttribute="bottom" id="OH3-0z-5n4"/>
+                            <constraint firstItem="lxl-w4-wpa" firstAttribute="centerY" secondItem="A02-XU-xXb" secondAttribute="centerY" id="auw-m8-qLr"/>
                             <constraint firstItem="A02-XU-xXb" firstAttribute="leading" secondItem="KLx-ud-Nq3" secondAttribute="leading" constant="10" id="h4q-oY-gXw"/>
+                            <constraint firstItem="ue1-n7-52R" firstAttribute="centerY" secondItem="A02-XU-xXb" secondAttribute="centerY" id="jh3-Tu-K1y"/>
+                            <constraint firstAttribute="trailing" secondItem="ue1-n7-52R" secondAttribute="trailing" constant="5" id="kuv-qq-OaV"/>
+                            <constraint firstItem="ue1-n7-52R" firstAttribute="leading" secondItem="lxl-w4-wpa" secondAttribute="trailing" constant="2" id="o45-ld-9FN"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pk4-5f-4QO">
                         <rect key="frame" x="0.0" y="30" width="349" height="290.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noComment.png" translatesAutoresizingMaskIntoConstraints="NO" id="pq2-k0-eSS">
-                                <rect key="frame" x="120" y="90.5" width="110" height="110"/>
+                                <rect key="frame" x="119.5" y="90.5" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pq2-k0-eSS" secondAttribute="height" id="LZw-GN-cL3"/>
                                     <constraint firstAttribute="height" constant="110" id="rID-t2-q6l"/>
@@ -152,10 +173,11 @@
                 <outlet property="noCommentBV" destination="Pk4-5f-4QO" id="HqX-fL-cXn"/>
                 <outlet property="tableView" destination="QxG-de-F1J" id="dmE-2w-CXb"/>
             </connections>
-            <point key="canvasLocation" x="0.5" y="119.5"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="119.1904047976012"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="noComment.png" width="66" height="66"/>
+        <image name="more.png" width="16" height="16"/>
+        <image name="noComment.png" width="66.666664123535156" height="66.666664123535156"/>
     </resources>
 </document>
